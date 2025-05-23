@@ -210,6 +210,7 @@ Please fix the poem to meet all requirements.`]
         if (!inspector.overall_result) {
             console.log("Inspector thinks its not okay, fixing...");
             poem = (await Fixer(poem, inspector)).content.toString()
+            continue;
         }
         console.log("Fixed");
         break;
